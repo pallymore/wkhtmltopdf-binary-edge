@@ -6,7 +6,7 @@ arch = case RUBY_PLATFORM
   when /linux/
     'linux-x86'
   when /darwin/
-    'darwin-x86'
+    'darwin-x86-64'
   else
     raise "Invalid platform. Must be running linux or intel-based Mac OS."
 end
