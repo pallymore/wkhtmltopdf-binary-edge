@@ -3,13 +3,13 @@ Gem::Specification.new do |s|
   s.name = 'wkhtmltopdf-binary-edge'
   s.version = '0.12.2.1'
   s.summary = 'Provides binaries for WKHTMLTOPDF project in an easily accessible package. - forked from wkhtmltopdf-binary'
-  s.description = ''
+  s.description = 'Includes wkthmltopdf binaires for MacOSX and Ubuntu 14(32bit & 64bit)'
 
   s.required_ruby_version = '>= 1.8.7'
   s.required_rubygems_version = ">= 1.3.6"
 
   s.authors = ['Orginial Author: - Research Information Systems, The University of Iowa', 'Yurui Zhang']
-  s.homepage = ''
+  s.homepage = 'https://github.com/pallymore/wkhtmltopdf-binary-edge'
   s.email = 'yuruiology@gmail.com, vpr-ris-developers@iowa.uiowa.edu,mcollas@aconex.com'
 
   s.bindir = 'bin'
