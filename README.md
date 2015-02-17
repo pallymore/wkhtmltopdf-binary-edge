@@ -18,3 +18,6 @@ included binaries
 * OS X 10.6+ (Carbon)	  32-bit (currently 32bit build works better
   than 64 bit build)
 
+### Recommended for development & testing only.
+
+### If you are using wkhtmltopdf on heroku, please try [this gem](https://github.com/pallymore/wkhtmltopdf-heroku-edge)
