@@ -7,11 +7,11 @@ This is forked from tolgap/wkhtmltopdf-binary.
 In your `Gemfile`:
 
 ```ruby
-gem 'wkhtmltopdf-binary-edge', '~> 0.12.3.0'
+gem 'wkhtmltopdf-binary-edge', '~> 0.12.4.0'
 ```
 
-### current version 0.12.3
-[wkhtmltopdf changes](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.3)
+### current version 0.12.4
+[wkhtmltopdf changes](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.4)
 
 ### Supported Systems
 
