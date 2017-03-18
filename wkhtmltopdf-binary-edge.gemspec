@@ -20,4 +20,6 @@ Gem::Specification.new do |s|
     libexec/wkhtmltopdf-darwin-x86_64
     libexec/wkhtmltopdf-linux-amd64
     libexec/wkhtmltopdf-linux-x86)
+  
+  s.licenses = ['MIT']
 end
