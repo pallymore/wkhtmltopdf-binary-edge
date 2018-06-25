@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
 arch = case RUBY_PLATFORM
+  when /powerpc64le-linux/
+    'linux-powerpc64le'
   when /64.*linux/
     'linux-amd64'
   when /darwin/
