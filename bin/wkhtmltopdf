@@ -9,7 +9,20 @@ arch = case RUBY_PLATFORM
     raise "Invalid platform. Must be running linux or intel-based Mac OS."
 end
 
+# We check what type of OS if it's linux
+if arch == 'linux-amd64'
+  OS_LIKE = case Open3.capture3('grep', 'ID_LIKE', '/etc/os-release').first
+  when /debian/
+    'debian'
+  when /rhel/
+    'rhel'
+  else
+    raise 'Unsupported OS type. Must be running RHEL or Debian type of Linux OS.'
+  end
+  os_like = "#{OS_LIKE}-"
+end
+
 args = $*.map { |x| x.include?(' ') ? "'" + x + "'" : x }
-cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltopdf-#{arch}"
+cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltopdf-#{os_like}#{arch}"
 
 exec "#{cmd} #{args.join(' ')}"
