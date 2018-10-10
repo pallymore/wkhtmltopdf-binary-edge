@@ -10,6 +10,7 @@ arch = case RUBY_PLATFORM
 end
 
 # We check what type of OS if it's linux
+OS_LIKE = ''
 if arch == 'linux-amd64'
   OS_LIKE = case Open3.capture3('grep', 'ID_LIKE', '/etc/os-release').first
   when /debian/
@@ -19,10 +20,9 @@ if arch == 'linux-amd64'
   else
     raise 'Unsupported OS type. Must be running RHEL or Debian type of Linux OS.'
   end
-  os_like = "#{OS_LIKE}-"
 end
 
 args = $*.map { |x| x.include?(' ') ? "'" + x + "'" : x }
-cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltopdf-#{os_like}#{arch}"
+cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltopdf-#{OS_LIKE}#{arch}"
 
 exec "#{cmd} #{args.join(' ')}"
