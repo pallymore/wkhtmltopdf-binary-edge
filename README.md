@@ -3,6 +3,8 @@ This is forked from tolgap/wkhtmltopdf-binary.
 
 ### If you are using wkhtmltopdf on heroku, please use [this gem](https://github.com/rposborne/wkhtmltopdf-heroku) instead!
 
+For Alpine Linux support, please use [this fork](https://github.com/khalilgharbaoui/wkhtmltopdf-binary-edge-alpine) instead.
+
 ## Installation
 In your `Gemfile`:
 
