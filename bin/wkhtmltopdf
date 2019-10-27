@@ -9,7 +9,6 @@ arch = case RUBY_PLATFORM
     raise "Invalid platform. Must be running linux or intel-based Mac OS."
 end
 
-args = $*.map { |x| x.include?(' ') ? "'" + x + "'" : x }
 cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltopdf-#{arch}"
 
-exec "#{cmd} #{args.join(' ')}"
+exec cmd, *ARGV
