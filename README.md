@@ -9,7 +9,7 @@ For Alpine Linux support, please use [this fork](https://github.com/khalilgharba
 In your `Gemfile`:
 
 ```ruby
-gem 'wkhtmltopdf-binary-edge', '~> 0.12.5.0'
+gem 'wkhtmltopdf-binary-edge', '~> 0.12.5.1'
 ```
 
 ### current version 0.12.5
