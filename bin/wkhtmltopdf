@@ -11,7 +11,9 @@ end
 
 # We check what type of OS if it's linux
 os_like = ''
-if arch == 'linux-amd64'
+if ENV['WKHTMLTOPDF_BIN']
+  cmd = ENV['WKHTMLTOPDF_BIN']
+elsif arch == 'linux-amd64'
   require 'open3'
   os_like = case Open3.capture3('grep', 'ID_LIKE', '/etc/os-release').first
   when /debian/
@@ -24,6 +26,6 @@ if arch == 'linux-amd64'
 end
 
 args = $*.map { |x| x.include?(' ') ? "'" + x + "'" : x }
-cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltopdf-#{os_like}#{arch}"
+cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltopdf-#{os_like}#{arch}" unless ENV['WKHTMLTOPDF_BIN']
 
 exec "#{cmd} #{args.join(' ')}"

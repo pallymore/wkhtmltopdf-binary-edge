@@ -18,4 +18,10 @@ gem 'wkhtmltopdf-binary-edge', '~> 0.12.5.0'
 * Linux (Ubuntu Trusty)	64-bit
 * OS X 10.7+            64-bit
 
+Other OS such as Arch Linux, we can install the package `wkhtmltopdf`, then set the environment variable
+
+```
+WKHTMLTOPDF_BIN=/usr/bin/wkhtmltopdf
+```
+
 ### Recommended for development & testing only.
